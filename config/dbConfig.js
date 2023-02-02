@@ -7,7 +7,8 @@ mongoose.set('strictQuery', true)
 export const connectToDb = async () =>{
     try{
         mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.popsa.mongodb.net/?retryWrites=true&w=majority`)
+        console.log("Connected to database!")
     }catch(err){
-        console.log("Connection fail")
+        console.log("Connection fail!")
     }
 }
