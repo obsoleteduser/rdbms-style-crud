@@ -1,12 +1,12 @@
 import { Schema, model } from "mongoose";
 
 const ordersSchema = new Schema({
-    productName: {},
-    categoryId: {},
-    productPrice: {},
-    productDescription: {},
-    buyerId: {},
-    orderDate: {}
+    productName: {type: String, required},
+    categoryId: {type: String, required},
+    productPrice: {type: String, required},
+    productDescription: {type: String, required},
+    buyerId: {type: String, required},
+    orderDate: {type: Date, required}
 })
 
 
