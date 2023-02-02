@@ -1,6 +1,8 @@
 import express from 'express'
-import ordersController from '../controller/ordersController'
+import ordersController from '../controller/ordersController.js'
 
-export const ordersRoute = express.Router()
+const ordersRoute = express.Router()
 
 ordersRoute.post('/orders', ordersController.addProduct)
+
+export default ordersRoute

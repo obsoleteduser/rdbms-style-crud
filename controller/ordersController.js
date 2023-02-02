@@ -1,8 +1,9 @@
-import { order } from "../models/ordersSchema";
+import { order } from "../models/ordersSchema.js";
 
 class OrdersController {
   addProduct = async (req, res) => {
     try {
+        console.log(req.body)
       const {
         productName,
         categoryId,
@@ -19,7 +20,7 @@ class OrdersController {
         buyerId,
         orderDate,
       });
-      es.json(newOrder)
+      res.json(newOrder)
     } catch (err) {
       res.json(err);
     }

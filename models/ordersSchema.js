@@ -1,12 +1,12 @@
 import { Schema, model } from "mongoose";
 
 const ordersSchema = new Schema({
-    productName: {type: String, required},
-    categoryId: {type: String, required},
-    productPrice: {type: String, required},
-    productDescription: {type: String, required},
-    buyerId: {type: String, required},
-    orderDate: {type: Date, required}
+    productName: {type: String, required: true},
+    categoryId: {type: String, required: true},
+    productPrice: {type: String, required: true},
+    productDescription: {type: String, required: true},
+    buyerId: {type: String, required: true},
+    orderDate: {type: Date, required: true}
 })
 
 

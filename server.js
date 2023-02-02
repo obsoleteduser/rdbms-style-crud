@@ -1,7 +1,7 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import { connectToDb } from './config/dbConfig.js'
-import { ordersRoute } from './routes/ordersRoute.js'
+import  ordersRoute  from './routes/ordersRoute.js'
 
 dotenv.config()
 
