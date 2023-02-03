@@ -5,8 +5,11 @@ const ordersSchema = new Schema({
     categoryId: {type: String, required: true},
     productPrice: {type: String, required: true},
     productDescription: {type: String, required: true},
-    buyerId: {type: String, required: true},
-    orderDate: {type: Date, required: true}
+    buyerId: {
+        type: Schema.Types.ObjectId,
+        ref: 'buyer'
+    },
+    orderDate: {type: Date, default: new Date()}
 })
 
 
